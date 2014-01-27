@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>/ASCII</title>
+	</head>
+	 <style>
+    body {
+      position: relative;
+      font-family: sans-serif;
+      width: 800px;
+      margin: 0 auto;
+      padding: 10px;
+      background-image:url(../static/noise-bg.jpg)
+    }
+
+    .error {
+      color: red
+    }
+
+    .map {
+      position: absolute;
+      right: 0;
+      top: 220px;;
+    }
+
+    label {
+      display: block;
+      font-size: 20px;
+    }
+
+    input[type=text] {
+      width: 400px;
+      font-size: 20px;
+      padding: 2px;
+    }
+
+    textarea {
+      width: 400px;
+      height: 200px;
+      font-size: 17px;
+      font-family: monospace;
+    }
+
+    input[type=submit] {
+      font-size: 24px;
+    }
+
+    hr {
+      margin: 20px auto;
+    }
+
+    .art + .art {
+      margin-top: 20px;
+    }
+
+    .art-title {
+      font-weight: bold;
+      font-size: 20px;
+      text-decoration:underline;
+    }
+
+    .art-body {
+      margin: 0;
+      font-size: 17px;
+      color:#339999;
+    }
+h2.date {
+	font-size: 12px; 
+	color: #9933FF;
+	margin: auto 0;
+	}
+h3.gr { 
+	font-size: 250%; 
+	margin: auto 0;
+	text-shadow:0 1px 0px #faf5fa;
+	float: left; 
+	font-family: Impact, Arial, Verdana; 
+	text-transform: uppercase; 
+	border-bottom: #CC0000 10px solid; 
+	font-weight: 50;
+	color: #707070;
+	
+	
+}
+h3.gr2 { 
+	font-size: 250%; 
+	margin: 25px 0;color:#336699; 
+	float: left; font-family: Impact, Arial, Verdana; 
+	text-transform: uppercase; 
+	position: relative; 
+	font-weight: 50;
+	
+}
+#header	{
+	position:relative;
+	top:0px;
+	width:100%;
+	height:80px;
+	font-size:14px;
+	clear:both;
+}
+
+a { 
+	text-decoration:none 
+}
+#footer {
+	position:relative;
+	bottom:0;
+	width:100%;
+	height:120px;
+	text-align:center;
+	clear:both;
+}
+.bottom {
+	position: relative;
+	margin-bottom: 15pxpx; /* negative value of footer height */
+	clear:both;
+  
+}
+
+.bottom .pic {
+
+  float: left;
+  margin: 10px 20px 10px 0;
+  width: 80px;
+}
+
+.bottom .pic img {
+  -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  border: 2px solid #fff;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.bottom .bio {
+  float: left;
+  margin-right: 20px;
+}
+
+.bottom .bio p {
+  color: #626262;
+  font-family: georgia, 'times new roman', times, serif;
+  font-size: 13px;
+  font-style: italic;
+  line-height: 22px;
+  margin: 15px 0;
+  text-align:justify;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.9);
+  width: 650px;
+}
+.date{
+	color:#9933FF;
+	padding:4px;
+	
+}
+</style>
+<body>
+	<div id="header">
+		<h3 class="gr"><a href="/blog">Mystic</h3><h3 class="gr2">&nbsp;Views</a></h3>
+	</div>
+	<br>
+	<div class="clear"></div>
+	<div class="hr"><hr/></div>
+	<h1>/ASCIICHAN</h1>
+	<form method="post">
+		<label>
+			<div>Title</div>
+			<input type="text" name="title" value="{{title}}">
+		</label>
+		<label>
+			<div>ART</div>
+			<textarea name="art">{{art}}</textarea>
+		</label>
+		<br>
+		<div class="error">{{error}}<br>
+		<input type="submit" value="Submit">
+		</form>
+		{% if img_url %}
+			<img class="map" src ="{{img_url}}">
+		{% endif %}
+		<div class="hr"><hr/></div>
+		{% for art in farts%}
+			<div class="art">
+				<div class="art-title">{{art.title}}</div>
+				<div class="date">{{art.created.strftime("%b %d, %Y %I:%M %p")}}</div>
+				<pre class="art-body">{{art.art}}</pre>
+			</div>
+			<div class="hr"><hr/></div>
+			{%endfor%}
+		</div>
+		<div class="clear"></div>
+		<br>
+		<div class="bottom">
+			<div class="pic">
+				<img src="../static/Avatar.jpg" alt="Avatar" height="70px" width="60px" />
+			</div>
+			<div class="bio">
+				<p>Hi, Thaman here. My interests are in Social networking,
+				Web design & development (HTML5, CSS3, Django, GAE, JQuery, XML),
+				entrepreneurship & innovation, startup companies, Bioinformatics and Proteomics.
+				I love Python language and in every possible way trying to be more Pythonic. 
+				</p>
+			</div>
+			<div class="clear"></div>
+		
+			<div class="line"></div>
+			<div style="text-align:center;">
+				<a href="https://twitter.com/2BioInfo" class="twitter-follow-button" data-show-count="false">Follow @2BioInfo</a>
+			<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+				<p>&copy; 2012 - mysticviews</p>
+			</div>	
+		 </div>
+	</body>
+</html>

@@ -1,0 +1,491 @@
+/* @import url(strawberry.css); */
+/* @import url(chocolate.css); */
+/* @import url(plum.css); */
+
+html { 
+    padding: 0;
+    margin: 0;
+    font-size: 90%;
+    font-family: Arial;
+    font-style: normal;
+    height: 100%;
+    background: #fff;
+    color: #000;
+}
+body {
+    padding: 0;
+    margin: 0;
+    min-height: 100%;
+    position: relative;
+}
+* html body { height: 100%; }
+
+
+
+a img { border: none }
+a { color: #176e9b; text-decoration: none }
+a:visited { color: #176e9b; }
+
+a.interwiki, a.http, a.www,a.file, a.mailto, a.https,  a.external { color: #48f }
+a.interwiki:visited, a.http:visited, a.https:visited, a.file:visited, a.mailto:visited, a.www:visited, a.external:visited { color: #65f }
+a.nonexistent { 
+    color: #f02;
+    font-weight: normal;
+}
+a.nonexistent:hover {
+    color: #f02;
+    text-decoration: underline;
+}
+a:hover { color: #176e9b; text-decoration: underline }
+
+
+a.mailto:before {
+    content: url(img/moin-email.png); 
+    margin: 0 0.2em;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+
+li p { margin: 0 }
+
+textarea, select, input {
+    border: 1px solid #999;
+    vertical-align: middle;
+    line-height: 1.2;
+    font-size: 100%;
+}
+textarea {
+    display: block;
+    width: 99%;
+}
+
+form.search {
+    float: right;
+    margin: 0.5em;
+    color: #666;
+}
+form.search p {
+    margin: 0;
+    font-size: 8pt;
+}
+form.search p input#titlesearch {
+    color: white;
+    background: #2494CD;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#2494CD', endColorstr='#1A72A1'); /* for IE */
+    background: -webkit-gradient(linear, left top, left bottom, from(#2494CD), to(#1A72A1)); /* for webkit browsers */
+    background: -moz-linear-gradient(top,  #2494CD,  #1A72A1); /* for firefox 3.6+ */ 
+    border: 1px solid #176e9b;
+}
+form.search p input#titlesearch:hover {
+    background: #1A72A1;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1A72A1', endColorstr='#2494CD'); /* for IE */
+    background: -webkit-gradient(linear, left top, left bottom, from(#1A72A1), to(#2494CD)); /* for webkit browsers */
+    background: -moz-linear-gradient(top,  #1A72A1,  #2494CD); /* for firefox 3.6+ */ 
+}
+form.search p input#fullsearch {
+    color: white;
+    background: #2494CD;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#2494CD', endColorstr='#1A72A1'); /* for IE */
+    background: -webkit-gradient(linear, left top, left bottom, from(#2494CD), to(#1A72A1)); /* for webkit browsers */
+    background: -moz-linear-gradient(top,  #2494CD,  #1A72A1); /* for firefox 3.6+ */ 
+    border: 1px solid #176e9b;
+}
+form.search p input#fullsearch:hover {
+    background: #1A72A1;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1A72A1', endColorstr='#2494CD'); /* for IE */
+    background: -webkit-gradient(linear, left top, left bottom, from(#1A72A1), to(#2494CD)); /* for webkit browsers */
+    background: -moz-linear-gradient(top,  #1A72A1,  #2494CD); /* for firefox 3.6+ */ 
+}
+div.gotobar p {
+    margin: 0;
+    padding: 0.5em;
+}
+
+
+div.editbar {
+    float: right;
+    margin: 1em 0.25em
+    color: #999;
+}
+div.editbar a {
+    font-size: 10pt;
+    color: #176e9b;
+    margin: 0 0.25em;
+}
+div.editbar a.edit:before {
+    content: url(img/edit.png);
+    color: #176e9b;
+    vertical-align: middle;
+    margin: 0 0.15em 0 0.5em;
+}
+div.editbar a:hover {
+    color: #176e9b;
+    text-decoration: underline;
+}
+
+a.logo {
+    display: block;
+    margin: 0.25em;
+    float: left;
+    clear: none;
+    font-size: 200%;
+    text-decoration: none;
+    color: #444;
+    line-height: 1.2;
+    font-family: Impact, Haettenschweiler, fantasy;
+    letter-spacing: 0.025em;
+}
+a.logo img {
+    vertical-align: middle;
+    margin: 0 0.25em 0 0;
+}
+
+
+ul#username {
+    display: block;
+    float: right;
+    clear: right;
+    list-style: none;
+    margin: 0 0.5em;
+}
+ul#username li {
+    list-style: none;
+    display: inline;
+    margin: 0 0 0 1em;
+    font-size: 90%;
+}
+ul#username li a#login {
+    color:#176e9b;
+}
+
+ul.gotobar {
+    margin: 0;
+    padding: 0 0.5em;
+    display: block;
+    border-top: 1px solid #e7e7e7;
+    border-bottom: 1px solid #e7e7e7;
+    color: #e7e7e7;
+    background: #e7e7e7;
+    clear: both;
+    overflow: hidden;
+}
+ul.gotobar li {
+    display: block;
+    float: left;
+    margin: 0.25em 0.25em;
+    border: 1px solid #176e9b;
+    overflow: hidden;
+}
+ul.gotobar li a {
+    letter-spacing: 0.05em;
+    display: block;
+    text-decoration: none;
+    font-size: 8pt;
+    padding: 0.25em 0.75em;
+    background: #2494CD;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#2494CD', endColorstr='#1A72A1'); /* for IE */
+    background: -webkit-gradient(linear, left top, left bottom, from(#2494CD), to(#1A72A1)); /* for webkit browsers */
+    background: -moz-linear-gradient(top,  #2494CD,  #1A72A1); /* for firefox 3.6+ */ 
+    color: white;
+}
+ul.gotobar li.current a {
+    color: #000;
+}
+ul.gotobar li.current {
+    border: 1px solid #176E9B;
+}
+ul.gotobar li a:hover {
+    color: white;
+    background: #1A72A1;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1A72A1', endColorstr='#2494CD'); /* for IE */
+    background: -webkit-gradient(linear, left top, left bottom, from(#1A72A1), to(#2494CD)); /* for webkit browsers */
+    background: -moz-linear-gradient(top,  #1A72A1,  #2494CD); /* for firefox 3.6+ */ 
+}
+body ul.gotobar li.clear {
+    display: block;
+    list-style: none;
+    clear: both;
+    float: none;
+    margin: 0;
+    padding: 0;
+    height: 0;
+    overflow: hidden;
+    border: none;
+    line-height: 1px;
+}
+
+div.header h1 {
+    color: #176e9b;
+    margin: 0;
+    padding: 0.5em;
+    font-weight: normal;
+    font-size: 125%;
+    letter-spacing: 0.025em;
+}
+div.header h1 a.backlink {
+    display: none;
+    color: white;
+}
+div.header h1 a.backlink:hover {
+    display: none;
+    color: white;
+    text-decoration: underline;
+}
+
+span.pagepath { 
+    font-size: 80%; color: #666; 
+    font-weight: bold;
+}
+span.pagepath a { 
+    font-weight: normal;
+    color: #999;
+}
+
+div.wrapper {
+    padding: 0.5em;
+    margin: 0 0.5em 1.5em 1.5em;
+    color: #444;
+    position: relative;
+    width: 960px;
+}
+
+div.content {
+    line-height: 1.35;
+    position: relative;
+}
+
+div.sidebar {
+    width: 11.5em;
+    position: absolute;
+    left: -12.25em;
+    top: 0.75em;
+    font-size: 90%;
+    line-height: 1.3;
+    background: #feb;
+    border: 1px solid #ea7;
+    border-bottom: 1px solid #e83;
+    padding: 1px;
+    margin: 0;
+}
+div.sidebar p {
+    margin: 0;
+}
+div.wrapper div.sidebar h1, 
+div.wrapper div.sidebar h2, 
+div.wrapper div.sidebar h3 { 
+    font-size: 100%; 
+    margin: 0 0 0.25em 0;
+    letter-spacing: 0.05em;
+    font-weight: normal;
+    color: #852;
+    border: 1px solid #ea6;
+    background: #fc7;
+    padding: 0.25em 0.5em;
+    line-height: 1.1;
+    font-family: DejaVu Sans, Droid Sans, Verdana, sans-serif;
+}
+div.sidebar ul { 
+    margin: 0;
+    list-style: none;
+    padding: 0 0 0.25em 0;
+}
+div.sidebar li {
+    list-style: none;
+    background: url(img/bullet.png) no-repeat 3px 3px;
+    padding: 0 0 0 15px;
+}
+div.sidebar a { color: #000; }
+div.sidebar a:hover { text-decoration: underline }
+
+
+div.wrapper h1, h2, h3, h4, h5 {
+    color: black;
+    font-family: Arial;
+    font-weight: normal;
+    line-height: 1.2;
+}
+div.wrapper h1 { font-size: 200%; margin: 1em 0 0.5em 0; }
+div.wrapper h2 { font-size: 150%; margin: 1em 0 0.5em 0; }
+div.wrapper h3 { font-size: 125%; letter-spacing: 0.025em; margin: 1.25em 0 0.75em 0; }
+div.wrapper h4 { font-size: 100%; letter-spacing: 0.05em; margin: 1.5em 0 1em 0; }
+
+
+ul#pagetrail {
+    display: block;
+    background: #eee;
+    border-bottom: 1px solid #fff;
+    border-top: 3px solid #bbb;
+    margin: 0;
+    padding: 0;
+}
+ul#pagetrail li {
+    display: inline;
+    list-style: none;
+    margin-left: 0.75em;
+}
+ul#pagetrail li a {
+    font-size: 80%;
+    color: #666;
+}
+
+
+div.footer {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: #ddd;
+    text-align: right;
+    border-top: 1px solid #ccc;
+    padding: 0;
+    margin: 0;
+}
+div.footer span.time {
+    display: block;
+    text-align: right;
+    color: #666;
+    font-size: 80%;
+    padding: 0.25em 0.5em;
+    font-style: italic;
+}
+
+div#message, p.status {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #ffa;
+    border-bottom: 1px solid #888;
+    padding: 0.125em 0.5em;
+    margin: 0;
+    font-size: 90%;
+    color: #000;
+    opacity: 0.90;
+    z-index: 1000;
+}
+
+div.message p { margin: 0 }
+
+#content table { 
+    border-collapse: collapse; 
+    font-size: 80%; 
+    margin: 0.5em auto;
+/*  margin: 0.5em;      if you don't like centered tables */
+}
+#content th, #content td { border: 1px solid #999; padding: 0.25em;  }
+#content th { background: #f6f6f6;  }
+
+tt { font-size: 90%; color: #333;
+    font-family: "DejaVu Sans Mono", "Lucida Console", monospace; }
+div.codearea, pre { 
+    border: 1px solid #ddd; 
+    background: #f6f6f6; 
+    color: #666;
+}
+div.codearea a.codenumbers { font-size: 70%; float: right; display: block; padding: 0.25em }
+div.codearea span.LineNumber { background: #fff; color: #888; border-right: 1px solid #ddd; margin-right: 0.25em; font-weight: bold; 
+}
+div.codearea pre { padding: 0; border: none; margin: 0; color: #222 }
+div.codearea span.ResWord { font-weight: bold }
+div.codearea span.ResWord2 { font-weight: bold; color: #f60 }
+div.codearea span.ID { font-style: italic }
+div.codearea span.Comment { color: #999; font-style: italic }
+div.codearea span.Preprc { color: #999; font-weight: bold;  }
+div.codearea span.String { color: #f60; font-style: italic }
+div.codearea span.Char { color: #f60; font-style: italic; font-weight: bold }
+div.codearea span.Number { color: #f60 }
+div.codearea span.ConsWord { color: #f60; font-weight: bold }
+div.codearea span.Operator { }
+div.codearea span.SPChar { font-weight: bold; }
+div.codearea span.Special { }
+div.codearea span.Error { color: #f60; font-weight: bold; background: #ddd }
+
+pre {
+    padding: 0.25em; 
+    font-family: "DejaVu Sans Mono", "Lucida Console", monospace;
+    font-size: 90%;
+    line-height: 1.25;
+    white-space: pre;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    white-space: -moz-pre-wrap;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
+    /* end css 3 or browser specific rules */
+}
+
+li p, td p, dd p, dt p { margin: 0 }
+
+hr {
+	background: transparent;
+	color: #fff;
+	border: none;
+	border-top: 1px solid #ccc;
+}
+
+div#preview {
+
+    background: #ffa;
+    border: 1px solid #888;
+    padding: 0.125em 0.5em;
+}
+
+div.warn ul, div.tip ul, div.hint ul, div.info ul, div.err ul,
+div.warn p, div.tip p, div.hint p, div.info p, div.err p {
+	margin: 0;
+}
+
+.diff-added span {
+	background: #eee;
+	color: #000;
+}
+
+.diff-removed span {
+	background: #feb;
+	color: #000;
+}	
+
+
+strong.highlight {
+	background: #feb;
+	color: #000;
+	font-weight: normal;
+}
+
+span.strike {
+      text-decoration: line-through;
+}
+span.u {
+      text-decoration: underline;
+}
+
+
+@media print {
+    div.sidebar, div.header { display: none }
+    div.footer { position: static }
+    div.wrapper { padding: 0; border: none }
+}
+
+/* from the HelpOnMoinWikiSyntax */
+div.comment { 
+    color: #444; 
+    background: #ddf;
+}
+
+div.red { background: #fcc; }
+div.green { background: #cfc; }
+div.blue { background: #ccf; }
+
+div.solid, div.dashed, div.dotted {
+    border: 2px solid #000;
+    padding: 0.5em;
+}
+div.solid { border-style: solid }
+div.dashed { border-style: dashed }
+div.dotted { border-style: dotted }
+
+div.blink { text-decoration: blink }
+
+table.addcommentform textarea { width: 50em; }

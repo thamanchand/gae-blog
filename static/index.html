@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+	<title>Blog</title>
+        
+<style>
+body {
+	background: url(../static/bg.jpg) repeat;
+}
+
+body > .container {
+	margin-top: 20px; /*padding-top: 10px;*/
+}
+
+blockquote {
+	border-left: 5px solid #ddd;
+}
+
+.topbar {
+	position: static; min-width: 940px;
+}
+
+.topbar-inner,.topbar .fill{
+	background-color:#222;
+	background-image:-khtml-gradient(linear, left top, left bottom, from(#414751), to(#353840));
+	background-image:-moz-linear-gradient(top, #414751, #353840);
+	background-image:-ms-linear-gradient(top, #414751, #353840);
+	background-image:-webkit-gradient(linear, left top, left bottom, color-stop(0%, #414751), color-stop(100%, #353840));
+	background-image:-webkit-linear-gradient(top, #414751, #353840);
+	background-image:-o-linear-gradient(top, #414751, #353840);
+	background-image:linear-gradient(top, #414751, #353840);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#414751', endColorstr='#353840', GradientType=0);
+}
+.topbar div > ul, .topbar form {
+	float: right;
+}
+
+/*.topbar h3 a {*/
+#logo a {
+	/*background: #333; margin-left: 0;*/
+	font-family: 'Segoe UI';
+	float: left;
+	display: block;
+	padding: 8px 20px 12px;
+	margin-left: -20px;
+	color: white;
+	font-size: 20px;
+	font-weight: 200;
+	line-height: 1;
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+	text-decoration: none;
+}
+body.item_page .topbar .container {
+	width: 1180px;
+}
+
+body.item_page > .container {
+	width: 1180px;
+}
+
+#logo a:hover {
+	background-color: rgba(255, 255, 255, 0.05);
+}
+
+footer {
+	border-top: 1px solid #fff;
+}
+
+.container .content {
+	float: left; width: 702px;
+}
+.container .sidebar {
+	float: right;
+	width: 220px; min-height: 200px; background: #F5F5F5; float: right; padding: 0 0 20px;
+	overflow: hidden;
+}
+
+body.item_page_shrinked > .container .sidebar {
+	display: none;
+}
+
+.container .sidebar h2 {
+	font-size: 14px; padding: 0 10px; color: #515255; text-decoration: none; clear: both;
+	
+	background: #efefef; margin: 10px 0;
+}
+.container .sidebar h2:first-of-type {
+	margin-top: 0;
+}
+.container .sidebar p {
+	margin: 0 0 5px; padding: 0 10px; color: #8D8F8F;
+}
+.container .item_content {
+  clear: both; overflow: hidden;
+}
+
+#nav {
+	overflow: hidden;
+}
+#nav li {
+	float: left; margin-left: 10px;
+}
+
+#items {
+	overflow: hidden; width: 100%; list-style: none; margin-left: 0;
+}
+#items li {
+	float: left; width: 200px;
+	/*border: 10px solid #F4F1F1;*/
+	position: relative; margin: 0 0 30px 20px;
+	
+	overflow: hidden;
+	padding: 10px;
+	
+	background: #F9F9F9;
+	-webkit-box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.2);
+	-moz-box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.2);
+	box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.2);
+}
+#items .item_img img {
+  width: 200px; height: 150px;
+}
+#items .item_img {
+	overflow: hidden; vertical-align: bottom; display: inline-block;
+	text-decoration: none; width: 200px; height: 150px;
+}
+#items a.edit_item {
+	position: absolute; z-index: 2;
+}
+#items li.first_item {
+	clear: left; margin-left: 1px;
+}
+#items li a {
+	position: relative;
+}
+#items li h3.title, #items li h1.title {
+	font-weight: bold; color: #333;
+	position: absolute; padding: 5px 10px;
+	bottom: 0; left: 0; right: 0; display: none;
+	
+	line-height: 24px;
+	
+	background: rgb(255,255,255);
+	background: rgba(255, 255, 255, 0.8);
+	
+	font-size: 100%; margin: 0;
+}
+#items li a:hover h3.title, #items li a:hover h1.title {
+	display: block;
+}
+
+form > div, form > fieldset > div {
+	overflow: hidden;
+}
+
+form > div:not(:first-child) {
+	margin-top: 10px;
+}
+#no_browser_support_list {
+	list-style: none; margin: 0;
+}
+#no_browser_support_list li {
+	margin: 5px 0;
+}
+</style></head>
+
+<body>
+<div class="topbar">
+		<div class="fill">
+			<div class="container">
+			
+				<div id="logo"><a href="http://cssdeck.com/">CSSDeck</a></div>
+				
+				<form action="http://cssdeck.com/search/">
+					<input placeholder="Search" class="medium" name="q" type="text">
+				</form>
+				
+				<ul>
+										<!--<li><a href="http://cssdeck.com/submit">Submit</a></li>-->
+					<li class="dropdown" data-dropdown="dropdown">
+						<a href="#" class="dropdown-toggle">Submit</a>
+						<ul class="dropdown-menu">
+							<li><a href="http://cssdeck.com/submit">A Creation</a></li>
+							<li class="divider"></li>
+							<li><a href="http://cssdeck.com/submit?item_type=snippet">A Snippet</a></li>
+							<li class="divider"></li>
+							<li><a href="http://cssdeck.com/post/submit">A Post</a></li>
+							<!--<li class="divider"></li>
+							<li><a href="#">Another link</a></li>-->
+						</ul>
+					</li>
+					<li><a href="http://cssdeck.com/t">Play</a></li>
+					<li><a href="http://cssdeck.com/snippet">Snippets</a></li>
+					<li><a href="http://cssdeck.com/post/show">Posts</a></li>
+					<li><a href="http://cssdeck.com/request">Requests</a></li>
+											<li><a href="http://cssdeck.com/login">Login</a></li>
+						<li><a href="http://cssdeck.com/signup">Signup</a></li>
+									</ul>
+				
+				<!--<ul class="nav secondary-nav">
+					<li class="menu">
+						<a href="#" class="menu">Lorem ipsum</a>
+						<ul class="menu-dropdown">
+							<li><a href="#">Dolor sit</a></li>
+							<li><a href="#">Amet Consequeter</a></li>
+							<li class="divider"></li>
+							<li><a href="#">Enough with the Latin</a></li>
+						</ul>
+					</li>
+				</ul>-->
+				
+			</div>
+			
+		</div>
+	</div>
+
+
+
+</body></html>

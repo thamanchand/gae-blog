@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<link type="text/css" rel="stylesheet" href="/stylesheets/main.css" />
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js?ver=1.4.2"></script>
+    <script src="static/login.js"></script>
+		<title>New Post</title>
+	</head>
+	<body>
+	<div id="header">
+		<h3 class="gr"><a href="/blog">Mystic</h3><h3 class="gr2">&nbsp;Views</a></h3>
+	</div>
+	<div class="clear"></div>
+	<div class="hr"><hr/></div>
+	<h1>New Post</h1>
+	<form method="post">
+		<div id="comment_form">
+			<div>
+				<input type="text" name="subject" id="name" value="{{subject}}" placeholder="Title">
+			</div>
+			<div>
+				<textarea rows="10" name="content" id="comment" placeholder="Content" value={{content}}></textarea>
+			</div>
+			<div>Category</div>
+				<select name="category">
+					<option value="Technology">Technology</option>
+					<option value="Sports">Sports</option>
+					<option value="Entertainment">Entertainment</option>
+					<option value="Others">Others</option>
+				</select>
+			</div>
+			<div class="clear"></div><br><br>
+			<div class="error">{{error}}</div>
+				<input type="submit" name="submit" value="POST" class="button" />
+		</div>
+	</form>
+	<div class="clear"></div><br><br>	
+	<div class="bottom">
+		<div class="pic">
+			<img src="../static/Avatar.jpg" alt="Avatar" height="70px" width="60px" />
+		</div>
+		<div class="bio">
+			<p>Hi, Thaman here. My interests are in Social networking,
+			Web design & development (HTML5, CSS3, Django, GAE, JQuery, XML),
+			entrepreneurship & innovation, startup companies, Bioinformatics and Proteomics.
+			I love Python language and in every possible way trying to be more Pythonic. 
+			</p>
+		</div>
+		<div class="clear"></div>
+	
+		<div class="line"></div>
+		<div style="text-align:center;">
+			<a href="https://twitter.com/2BioInfo" class="twitter-follow-button" data-show-count="false">Follow @2BioInfo</a>
+		<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+			<p>&copy; 2012 - mysticviews</p>
+		</div>	
+	 </div>
+		</form>
+	</div>
+	<div class="clear"></div>
+	<br>
+	</body>
+</html>
